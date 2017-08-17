@@ -1,4 +1,7 @@
-class Replicator
+
+  class Replicator
+require 'pry'
+
 
   # When the Enterprise calls Replicator.new, this method executes.
   def initialize(enterprise)
@@ -23,6 +26,7 @@ class Replicator
   # This sets up an accessor to the replicator plate, so that in the main
   # geordis-replicator.rb program, we can see what's on the replicator plate (if anything)
   def plate
+
     @plate
   end
 
@@ -40,6 +44,7 @@ class Replicator
   # and then manually execute each method to ensure
   # it returns what's expect.
   def replicate(recipe)
+
 
     # Setup an instance variable for the recipe
     # so that other methods can see what the recipe is
@@ -93,6 +98,7 @@ class Replicator
       @enterprise.cupboard.shelf,
       @inside_replicator
     )
+
   end
 
   def glass_inside_replicator
@@ -134,7 +140,7 @@ class Replicator
   # This adjusts the temperature of the glass to
   # what the recipes calls for.
   def adjust_temperature
-
+binding.pry
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 
